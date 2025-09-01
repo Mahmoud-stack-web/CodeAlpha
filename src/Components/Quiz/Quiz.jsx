@@ -94,7 +94,6 @@ const Quiz = () => {
 
       {flashcards.length > 0 && (
         <div className="card-wrapper">
-          {/* Card */}
           <div className="card-container">
             <div className={`card ${flipped ? "flipped" : ""}`}>
               <div className="card-front">
@@ -106,20 +105,17 @@ const Quiz = () => {
             </div>
           </div>
 
-          {/* Show Answer Button */}
           <div className="flip-btn">
             <button onClick={() => setFlipped(!flipped)}>
               {flipped ? "Hide Answer" : "Show Answer"}
             </button>
           </div>
 
-          {/* Navigation Buttons */}
           <div className="navigation">
             <button onClick={handlePrevious}>Previous</button>
             <button onClick={handleNext}>Next</button>
           </div>
 
-          {/* Edit/Delete Buttons */}
           <div className="actions">
             <button onClick={() => handleEdit(flashcards[currentIndex])}>
               Edit
@@ -131,7 +127,6 @@ const Quiz = () => {
         </div>
       )}
 
-      {/* Form to Add/Edit Flashcards */}
       <div className="form">
         <h3>{editingId ? "Edit Flashcard" : "Add New Flashcard"}</h3>
         <input
