@@ -1,0 +1,57 @@
+body {
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.quote-box {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  transition: transform 0.2s ease;
+}
+
+.quote-box:hover {
+  transform: translateY(-5px);
+}
+
+#quote {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+#author {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #666;
+  font-style: italic;
+}
+
+#new-quote {
+  padding: 0.8rem 1.6rem;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#new-quote:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
