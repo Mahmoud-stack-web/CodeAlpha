@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --shadow-glass-inset: inset 0 17px 5px -9px rgba(139, 92, 246, 0.15);
+    --shadow-glass-sm: 0 8px 25px rgba(99, 102, 241, 0.4);
+
+    --color-background: #0F172A;
+    --color-foreground: #F8FAFC;
+    --color-muted: #94A3B8;
+    --color-accent-start: #6366F1;
+    --color-accent-end: #8B5CF6;
+    --background-with-opacity: rgba(15, 23, 42, 0.6);
+    --color-accent-with-opacity: rgba(99, 102, 241, 0.35);
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    background: radial-gradient(circle at top left,
+        rgba(99, 102, 241, 0.2),
+        transparent),
+      radial-gradient(circle at bottom right,
+        rgba(139, 92, 246, 0.15),
+        transparent),
+      var(--color-background);
+    color: var(--color-foreground);
+  }
+}
+
+@layer components {
+  .custom-bg {
+    border: 1px solid var(--color-accent-with-opacity);
+    background-color: var(--background-with-opacity);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-glass-inset);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .custom-bg:hover {
+    box-shadow: var(--shadow-glass-sm);
+    transform: translateY(-2px);
+  }
+
+  .gradient-text {
+    background: linear-gradient(to right,
+        var(--color-accent-start),
+        var(--color-accent-end));
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(to right,
+        var(--color-accent-start),
+        var(--color-accent-end));
+    color: white;
+  }
+}
