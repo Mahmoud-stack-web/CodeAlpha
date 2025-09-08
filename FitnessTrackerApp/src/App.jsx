@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ActivityForm from "./Components/ActivityForm";
 import Dashboard from "./Components/Dashboard";
 import ActivityList from "./Components/ActivityList";
@@ -8,8 +8,6 @@ const STORAGE_KEY = "fitness_activities_v1";
 export default function App() {
   const [activities, setActivities] = useState([]);
   const [editing, setEditing] = useState(null);
-
-  // load from localStorage
   useEffect(() => {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) {
