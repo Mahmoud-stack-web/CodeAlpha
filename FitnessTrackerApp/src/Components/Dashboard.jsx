@@ -32,8 +32,6 @@ export default function Dashboard({ activities }) {
     const calsToday = activities
       .filter((a) => a.date === todayKey)
       .reduce((s, a) => s + (a.calories || 0), 0);
-
-    // prepare week aggregation
     const days = getLast7Days();
     const map = {};
     days.forEach(
